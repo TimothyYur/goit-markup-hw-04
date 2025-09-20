@@ -71,12 +71,39 @@ img{
   color: #2E2F42;
   padding: 24px 0;
   display: block;
+  position: relative;
+}
+.navigation-link::after{
+  content: "";
+  display: block;
+  border-radius: 2px;
+  width: 0%;
+  height: 4px;
+  background-color: #404BBF;
+  position: absolute;
+  top: 96%;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+.navigation-link:hover::after{
+  width: 100%;
+  transition: width 0.2s ease-in-out;
 }
 .navigation-link:hover{
   color: #404bbf;
 }
+.navigation-link:hover ::after{
+  opacity: 1;
+}
 .navigation-link:focus{
   color: #404bbf;
+}
+.navigation-link:active{
+  text-decoration: underline;
+  color: #787fd5;
+}
+.navigation-link:active::after{
+  background-color: #787fd5;
 }
 
 .contacts{
@@ -108,9 +135,16 @@ img{
 }
 
 .section-one{
-  background-color: #2E2F42;
-  display: flex;
   padding: 188px 0;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  ), url(/images/people-office.jpg);
+  background-color: #2E2F42;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .container-one{
@@ -185,6 +219,14 @@ img{
   width: calc((100% - 72px) / 4);
 }
 
+.advantages-icon{
+  width: 100%;
+  border: 1px solid #8E8F99;
+  border-radius: 4px;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
 .title{
   font-weight: 700;
   font-size: 36px;
@@ -249,6 +291,22 @@ img{
   letter-spacing: 0.02em;
   color: #434455;
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.member-socials{
+  display: flex;
+  padding: 0px 16px;
+  column-gap: 24px;
+}
+
+.socials-logo-link{
+  display: block;
+  border-radius: 50%;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  background-color: #4D5AE5;
 }
 
 .portfolio-list{
@@ -318,6 +376,13 @@ img{
   background-color: #2E2F42;
   padding: 100px 0;
 }
+
+.footer-container{
+  display: flex;
+  column-gap: 120px;
+  align-items: flex-start;
+}
+
 .footer-logo{
   display: inline-block;
   font-weight: 700;
@@ -341,4 +406,26 @@ img{
   letter-spacing: 0.02em;
   color: #F4F4FD;
   max-width: 264px;
+}
+
+.socials-title{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.socials-link{
+  display: inline-block;
+  border-radius: 50%;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  background-color: #4D5AE5;
+}
+
+.socials-link:not(:last-child){
+  margin-right: 16px;
 }
