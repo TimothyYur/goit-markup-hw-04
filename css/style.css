@@ -141,11 +141,11 @@ img{
     to bottom,
     rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)
-  ), url(.//images/people-office.jpg);
+  ), url(/images/people-office.jpg);
   background-color: #2E2F42;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .container-one{
