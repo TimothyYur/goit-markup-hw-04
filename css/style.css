@@ -73,6 +73,7 @@ img{
   padding: 24px 0;
   display: block;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-one{
   color: #404BBF;
@@ -311,16 +312,32 @@ img{
 .member-socials{
   display: flex;
   padding: 0px 16px;
-  column-gap: 24px;
+  gap: 24px;
+  justify-content: center;
 }
 
 .socials-logo-link{
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   padding: 12px;
   width: 40px;
   height: 40px;
   background-color: #4D5AE5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials-logo-link:hover{
+  background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.socials-logo-link:focus{
+  background-color: #404bbf;
+}
+
+.socials-logo{
+  fill: #f4f4fd;
 }
 
 .portfolio-list{
@@ -331,15 +348,19 @@ img{
   row-gap: 48px;
 }
 
+.portfolio-item{
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-item:hover{
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
 .portfolio-item:hover .animation__text{
   transform: translateY(0%);
-  
 }
 
 .portfolio-animation{
