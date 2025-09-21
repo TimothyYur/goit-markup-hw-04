@@ -433,7 +433,7 @@ img{
   color: #f4f4fd;
 }
 
-.footer-description{
+.footer-text{
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -472,11 +472,11 @@ img{
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-link:hover{
-  color: #404bbf;
+  background-color: #31d0aa;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socials-link:focus{
-  color: #404bbf;
+  background-color: #31d0aa;
 }
 
 .socials-link:not(:last-child){
