@@ -460,7 +460,6 @@ img{
 }
 
 .socials-link{
-  display: inline-block;
   border-radius: 50%;
   display: flex;
   align-items: center;
